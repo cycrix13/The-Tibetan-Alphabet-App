@@ -44,6 +44,7 @@
     }
     
     UIButton * btnAbout = [[UIButton alloc] initWithFrame:CGRectMake(0, _imageSize.height, screenBound.size.width, 48)];
+
     [btnAbout addTarget:self action:@selector(onAboutClick:) forControlEvents:UIControlEventTouchUpInside];
     [btnAbout setTitle:@"About" forState:UIControlStateNormal];
     [btnAbout setTitleColor:[UIColor darkTextColor] forState:UIControlStateNormal];
@@ -55,7 +56,7 @@
     [btnQuiz setTitleColor:[UIColor darkTextColor] forState:UIControlStateNormal];
     [_scrollView addSubview: btnQuiz];*/
     
-    _scrollView.contentSize = CGSizeMake(_imageSize.width, _imageSize.height + 96);
+    _scrollView.contentSize = CGSizeMake(_imageSize.width, _imageSize.height + 48);
 }
 
 - (void) onCharClick:(id)sender {
@@ -67,7 +68,10 @@
 
 - (void) onAboutClick:(id)sender {
     
+    UIViewController * controller = [self.storyboard instantiateViewControllerWithIdentifier:@"About"];
+    [self.navigationController pushViewController:controller animated:YES];
 }
+
 - (IBAction)onQuizClick:(id)sender {
     UIViewController * controller = [self.storyboard instantiateViewControllerWithIdentifier:@"QuizControllerViewController"];
     [self.navigationController pushViewController:controller animated:YES];

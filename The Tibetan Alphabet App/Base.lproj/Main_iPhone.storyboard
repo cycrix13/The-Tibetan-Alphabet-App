@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="dUe-iz-hS9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="dUe-iz-hS9">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -17,6 +17,7 @@
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="a8A-IO-MXZ"/>
                         <segue destination="r72-35-2JS" kind="push" id="g7r-WO-9Hk"/>
                         <segue destination="e6Y-Eu-qOD" kind="push" id="1zm-9O-4Cd"/>
+                        <segue destination="VyT-RG-HCU" kind="push" id="DZO-6C-iax"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fFl-K9-VtE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -71,6 +72,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8kV-HU-eb8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-284" y="314"/>
+        </scene>
+        <!--View Controller - About-->
+        <scene sceneID="XS6-64-Bkz">
+            <objects>
+                <viewController storyboardIdentifier="About" id="VyT-RG-HCU" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iLV-Ta-GFn"/>
+                        <viewControllerLayoutGuide type="bottom" id="Gtw-qo-SQr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="About" id="aX7-LQ-xor">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="about.png" translatesAutoresizingMaskIntoConstraints="NO" id="lbN-lU-yWe">
+                                <rect key="frame" x="20" y="81" width="280" height="115"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Created by Tenzin Dickyi Sinzitsang and Dhonam Pemba. Art by Phurbu Dolma." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="6DM-z8-yC8">
+                                <rect key="frame" x="20" y="204" width="280" height="102"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="102" id="dyE-vY-hqj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lbN-lU-yWe" firstAttribute="leading" secondItem="aX7-LQ-xor" secondAttribute="leading" constant="20" symbolic="YES" id="Prx-v3-2rg"/>
+                            <constraint firstItem="6DM-z8-yC8" firstAttribute="trailing" secondItem="lbN-lU-yWe" secondAttribute="trailing" id="SYD-pW-YNv"/>
+                            <constraint firstItem="6DM-z8-yC8" firstAttribute="top" secondItem="lbN-lU-yWe" secondAttribute="bottom" constant="8" symbolic="YES" id="VfG-N7-XGK"/>
+                            <constraint firstItem="lbN-lU-yWe" firstAttribute="leading" secondItem="6DM-z8-yC8" secondAttribute="leading" id="fKE-lr-Lag"/>
+                            <constraint firstItem="lbN-lU-yWe" firstAttribute="top" secondItem="iLV-Ta-GFn" secondAttribute="bottom" constant="61" id="mCe-Vo-412"/>
+                            <constraint firstAttribute="trailing" secondItem="lbN-lU-yWe" secondAttribute="trailing" constant="20" symbolic="YES" id="rib-VF-XYn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="About" id="GLe-gs-prM"/>
+                    <size key="freeformSize" width="375" height="480"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sEd-f2-KDq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="103" y="314"/>
         </scene>
         <!--View Controller - Home-->
         <scene sceneID="ufC-wZ-h7g">
@@ -249,6 +294,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="about.png" width="1032" height="115"/>
         <image name="answer.png" width="200" height="48"/>
         <image name="bottom_bar.png" width="320" height="92"/>
         <image name="nya_quiz.png" width="99" height="198"/>
